@@ -59,10 +59,10 @@
   /* ---- SECTIONS ---- */
   section { padding: var(--section-gap) 3rem; }
   #home {
-    min-height: 100vh;
+    min-height: max(560px, min(100vh, 840px));
     display: flex;
     align-items: center;
-    padding: 7rem 3rem 4rem;
+    padding: clamp(5rem, 10vh, 8rem) 3rem clamp(3rem, 6vh, 5rem);
   }
   .container { max-width: var(--max); margin: 0 auto; }
 
@@ -421,8 +421,9 @@
       padding: var(--section-gap) 1.25rem;
     }
     #home {
-      padding: 5.5rem 1.25rem 3rem;
-      min-height: auto;
+      padding: 5rem 1.25rem 2.5rem;
+      min-height: 0;
+      height: auto;
     }
     .divider { margin: 0 1.25rem; }
     .container { width: 100%; }
